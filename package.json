@@ -1,0 +1,10 @@
+{
+  "name": "vue-app",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "author": "Cannylcn <934007168@qq.com>",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install express"
+  }
+}

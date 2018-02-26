@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../config/default.js"],"names":["module","exports","port","mongodb"],"mappings":";;AAAA;;;AAGAA,OAAOC,OAAP,GAAiB;AACfC,QAAM,IADS;AAEfC,WAAS;AAFM,CAAjB","file":"default.js","sourcesContent":["/**\n *Created by admin on 2018/1/15\n */\nmodule.exports = {\n  port: 3000,\n  mongodb: 'mongodb://localhost:27017/lemao'\n}\n"]}
