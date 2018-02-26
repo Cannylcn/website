@@ -3790,12 +3790,13 @@ webpackJsonp([24], { "+E39": function E39(t, e, n) {
   }, JkZY: function JkZY(t, e, n) {
     "use strict";
     var r = n("te2A"),
-        o = "vux-modal-open-for-container";e.a = { methods: { getLayout: function getLayout() {
+        o = "vux-modal-open-for-container",
+        i = "#vux_view_box_body";e.a = { methods: { getLayout: function getLayout() {
           return "undefined" != typeof window && window.VUX_CONFIG && "VIEW_BOX" === window.VUX_CONFIG.$layout ? "VIEW_BOX" : "";
         }, addModalClassName: function addModalClassName() {
-          "function" == typeof this.shouldPreventScroll && this.shouldPreventScroll() || "VIEW_BOX" === this.getLayout() && (r.a.addClass(document.body, "vux-modal-open"), r.a.addClass(document.querySelector("#vux_view_box_body"), o));
+          "function" == typeof this.shouldPreventScroll && this.shouldPreventScroll() || "VIEW_BOX" === this.getLayout() && (r.a.addClass(document.body, "vux-modal-open"), r.a.addClass(document.querySelector(i), o));
         }, removeModalClassName: function removeModalClassName() {
-          "VIEW_BOX" === this.getLayout() && (r.a.removeClass(document.body, "vux-modal-open"), r.a.removeClass(document.querySelector("#vux_view_box_body"), o));
+          "VIEW_BOX" === this.getLayout() && (r.a.removeClass(document.body, "vux-modal-open"), r.a.removeClass(document.querySelector(i), o));
         } }, beforeDestroy: function beforeDestroy() {
         this.removeModalClassName();
       }, deactivated: function deactivated() {
@@ -3841,13 +3842,14 @@ webpackJsonp([24], { "+E39": function E39(t, e, n) {
         v = f.Dispatch,
         m = 0,
         y = {},
-        g = function g() {
+        g = "onreadystatechange",
+        b = function b() {
       var t = +this;if (y.hasOwnProperty(t)) {
         var e = y[t];delete y[t], e();
       }
     },
-        b = function b(t) {
-      g.call(t.data);
+        _ = function _(t) {
+      b.call(t.data);
     };p && d || (p = function p(t) {
       for (var e = [], n = 1; arguments.length > n;) {
         e.push(arguments[n++]);
@@ -3857,17 +3859,17 @@ webpackJsonp([24], { "+E39": function E39(t, e, n) {
     }, d = function d(t) {
       delete y[t];
     }, "process" == n("R9M2")(l) ? r = function r(t) {
-      l.nextTick(a(g, t, 1));
+      l.nextTick(a(b, t, 1));
     } : v && v.now ? r = function r(t) {
-      v.now(a(g, t, 1));
-    } : h ? (i = (o = new h()).port2, o.port1.onmessage = b, r = a(i.postMessage, i, 1)) : f.addEventListener && "function" == typeof postMessage && !f.importScripts ? (r = function r(t) {
+      v.now(a(b, t, 1));
+    } : h ? (i = (o = new h()).port2, o.port1.onmessage = _, r = a(i.postMessage, i, 1)) : f.addEventListener && "function" == typeof postMessage && !f.importScripts ? (r = function r(t) {
       f.postMessage(t + "", "*");
-    }, f.addEventListener("message", b, !1)) : r = "onreadystatechange" in c("script") ? function (t) {
-      u.appendChild(c("script")).onreadystatechange = function () {
-        u.removeChild(this), g.call(t);
+    }, f.addEventListener("message", _, !1)) : r = g in c("script") ? function (t) {
+      u.appendChild(c("script"))[g] = function () {
+        u.removeChild(this), b.call(t);
       };
     } : function (t) {
-      setTimeout(a(g, t, 1), 0);
+      setTimeout(a(b, t, 1), 0);
     }), t.exports = { set: p, clear: d };
   }, LKZe: function LKZe(t, e, n) {
     var r = n("NpIQ"),
